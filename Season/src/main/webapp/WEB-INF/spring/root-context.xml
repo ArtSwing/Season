@@ -14,11 +14,10 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
-		id="dataSource">
+		name="dataSource">
 		<property value="oracle.jdbc.driver.OracleDriver"
 			name="driverClassName" />
-		<property value="jdbc:oracle:thin:@localhost:1521:XE"
-			name="url" />
+		<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:xe" />
 		<property value="season" name="username" />
 		<property value="season" name="password" />
 	</bean>
@@ -27,7 +26,7 @@
 		<property name="dataSource" ref="dataSource" />
 		<property value="classpath:mybatis-config.xml"
 			name="configLocation" />
-		<property value="classpath:/mappers/**/*Mappers.xml"
+		<property value="classpath:/mappers/**/*mapper.xml"
 			name="mapperLocations" />
 	</bean>
 	<bean class="org.mybatis.spring.SqlSessionTemplate"

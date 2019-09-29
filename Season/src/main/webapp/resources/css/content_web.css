@@ -1,0 +1,46 @@
+/* common */
+td, div, p, li, dt, dd, input, textarea, select, h1, h2, h3, h4, h5 { font-family:Malgun Gothic, '¸¼Àº °íµñ', mGothic, dotum, gulim; }
+textarea, .scr { border:none;background:none;
+	scrollbar-face-color:#dbd5c5;		/* bar ÀÇ Ç¥¸é»ö */
+	scrollbar-highlight-color:#4a4947;	/* ¹à°Ô ºû³ª´Â ÁÂ»ó´Ü ¸ð¼­¸® */
+	scrollbar-3dlight-color:#dbd5c5;	/* ÁÂ»ó´Ü ¸ð¼­¸® ¾Æ·¡ºÎºÐ */
+	scrollbar-shadow-color:#4a4947;		/* ±×¸²ÀÚ Áö´Â ¿ìÇÏ´Ü */
+	scrollbar-darkshadow-color:#dbd5c5;	/* ±×¸²ÀÚ ¿ìÇÏ´Ü */
+	scrollbar-track-color:#dbd5c5;		/* ½ºÅ©·Ñ Æ®·¢ÀÇ »ö */
+	scrollbar-arrow-color:#4a4947;		/* »ï°¢ÇüºÎºÐ */
+	overflow-x:hidden;overflow-y:auto; 
+}
+@font-face{ 
+	font-family:mGothic;
+	font-style:normal;
+	font-weight:normal;
+	src: url('/font/MalgunGothic.eot'); 
+	src: local('¡Ø'),
+		 url('/font/MalgunGothic.woff') format('woff'), 
+		 url('/font/MalgunGothic.ttf') format('truetype');
+}
+@font-face{ 
+	font-family:mGothicB;
+	font-style:normal;
+	font-weight:bold;
+	src: url('/font/MalgunGothicBold.eot');
+	src: local('¡Ø'),
+		 url('/font/MalgunGothicBold.woff') format('woff'),
+		 url('/font/MalgunGothicBold.ttf') format('truetype');
+}
+strong, em, .fb	{ font-style:normal; font-weight:bold; font-family:mGothicB, Malgun Gothic, '¸¼Àº °íµñ'; }
+.list .storeIcon .btn-reserve {display:none}
+/* tablet, mobilt */
+@media only screen and (max-width:1024px){ 
+	.list .storeIcon .btn-reserve {display:inline-block; margin-top:5px; *zoom:1; *display:inline}
+}
+
+/* tablet */
+@media only screen and (min-width:641px) and (max-width:1024px){ 
+
+}
+
+/* mobile */
+@media only screen and (max-width:640px){
+
+}

@@ -4,7 +4,6 @@
     "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<properties>
-		<property name="tblMember" value="member" />
 		<property name="mMid" value="mid" />
 		<property name="mIdentify" value="identify" />
 		<property name="mPassword" value="password" />
@@ -12,7 +11,7 @@
 	</properties>
 	
 	<typeAliases>
-        <package name="com.ht.season.dto.memberDTO" />
+        <package name="com.ht.season.member.memberDTO" />
     </typeAliases>
 
 </configuration>
