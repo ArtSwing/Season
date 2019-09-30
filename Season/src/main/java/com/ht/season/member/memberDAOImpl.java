@@ -1,23 +1,33 @@
 package com.ht.season.member;
 
-import java.util.List;
+import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.session.SqlSession;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository("memberDAO")
 public class memberDAOImpl implements memberDAO {
 
-	@Autowired
+	@Inject
 	private SqlSession sqlSession;
-	
-	public void setSqlSession(SqlSession sqlSession) {
-		this.sqlSession = sqlSession;
-	}
+
 	@Override
-	public List<memberDTO> getMemberList() {
-		return sqlSession.selectList("getMemberList");
+	public boolean loginCheck(memberDTO vo) {
+		String name = sqlSession.selectOne("member.loginCheck", vo);
+		return(name == null) ? false: true;
 	}
+	
+	@Override
+	public memberDTO viewMember(memberDTO vo) {
+		return sqlSession.selectOne("member.viewMember", vo);
+	}
+	
+	public void logout(HttpSession session) {
+		
+	}
+	
+	
+	
 
 }

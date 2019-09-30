@@ -1,21 +1,33 @@
 package com.ht.season.member;
 
-import java.util.List;
-
-import javax.annotation.Resource;
+import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Service;
 
-@Service("memberService")
+@Service
 public class memberServiceImpl implements memberService{
 
-	@Resource(name="memberDAO")
-	private memberDAO memberDAO;
+	@Inject
+	memberDAO memberDao;
 	
 	@Override
-	public List<memberDTO> getMemberList(){
-		return memberDAO.getMemberList();
+	public boolean loginCheck(memberDTO vo, HttpSession session) {
+		boolean result = memberDao.loginCheck(vo);
+		if(result) {
+			memberDTO vo2 = viewMember(vo);
+			session.setAttribute("identify",vo2.getIdentify());
+			session.setAttribute("spot",vo2.getSpot());
+		}
+		return result;
+	}
+	@Override
+	public memberDTO viewMember(memberDTO vo) {
+		return memberDao.viewMember(vo);
 	}
 	
-	
+	@Override
+	public void logout(HttpSession session) {
+		session.invalidate();
+	}
 }

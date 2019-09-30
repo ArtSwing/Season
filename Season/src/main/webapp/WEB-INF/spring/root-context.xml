@@ -14,10 +14,11 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
-		name="dataSource">
+		id="dataSource">
 		<property value="oracle.jdbc.driver.OracleDriver"
 			name="driverClassName" />
-		<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:xe" />
+		<property value="jdbc:oracle:thin:@localhost:1521:XE"
+			name="url" />
 		<property value="season" name="username" />
 		<property value="season" name="password" />
 	</bean>

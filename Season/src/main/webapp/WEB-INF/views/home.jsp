@@ -9,19 +9,19 @@
 <script>
 	$(document).ready(function() {
 		$("#btnLogin").click(function() {
-			var user_id = $("#user_id").val();
-			var user_pw = $("#user_pw").val();
+			var user_id = $("#identify").val();
+			var user_pw = $("#password").val();
 			if (user_id.length == 0) {
 				alert("아이디를 입력하세요.");
-				$("#user_id").focus();
+				$("#identify").focus();
 				return;
 			}
 			if (user_pw.length == 0) {
 				alert("비밀번호를 입력하세요.");
-				$("#user_pw").focus();
+				$("#password").focus();
 				return;
 			}
-			document.form1.action = "${path}/season/login"
+			document.form1.action = "${path}/loginCheck"
 			document.form1.submit();
 		});
 	});
@@ -30,13 +30,17 @@
 <body>
 	<div class="login-page">
 		<div class="form">
-			<form class="login-form" name="form1" method="post" action="login">
-				<input type="text" placeholder="지점번호" id="user_id" name="user_id" />
-				<input type="password" placeholder="비밀번호" id="user_pw" name="user_pw" />
-				<button>로그인</button>
-				<p class="message">
-					Not registered? <a href="#">Create an account</a>
-				</p>
+			<form class="login-form" name="form1" method="post"
+				action="loginCheck">
+				<input type="text" placeholder="아이디" id="identify" name="identify" /> <input
+					type="password" placeholder="비밀번호" id="password" name="password" />
+				<button type="button" id="btnLogin">로그인</button>
+				<c:if test="${msg == 'failuer'}">
+					<script>alert('비밀번호가 틀렸습니다.');</script>
+				</c:if>
+				<c:if test="${msg == 'logout'}">
+					<script>alert('로그아웃 되었습니다.');</script>
+				</c:if>
 			</form>
 		</div>
 	</div>
