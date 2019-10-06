@@ -3,7 +3,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-<title>- 계절밥상 관리자 페이지 -</title>
 <%@ include file="header.jsp" %>
 <link href="<c:url value="/resources/css/main.css"/>" rel="stylesheet">
 </head>

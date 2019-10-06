@@ -9,5 +9,4 @@ public class mainController {
 	public String login() {
 		return "main";
 	}
-
 }

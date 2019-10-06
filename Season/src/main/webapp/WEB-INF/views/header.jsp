@@ -12,6 +12,7 @@
 		document.getElementById('load_css').style.opacity = 1.0;
 	}
 </script>
+<title>::: 계절밥상 - Supply Chain Management :::</title>
 </head>
 <body onload="load()">
 	<div id="load_css">
@@ -31,8 +32,7 @@
 
 		<div id="header_main">
 			<ul class="menu_hover">
-				<li style="background-color: rgba(80, 90, 30, 0.8);"><a
-					href="#"><strong>메인</strong></a></li>
+				<li><a href="#"><strong>메뉴관리</strong></a></li>
 				<li><a href="#"><strong>재고관리</strong></a></li>
 				<li><a href="#"><strong>발주관리</strong></a></li>
 				<li><a href="#"><strong>요청사항</strong></a></li>
