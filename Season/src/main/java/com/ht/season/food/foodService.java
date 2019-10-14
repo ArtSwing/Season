@@ -1,5 +1,7 @@
 package com.ht.season.food;
 
-public interface foodService {
+import java.util.List;
 
+public interface foodService {
+	public List<foodDTO> viewFood(foodDTO vo);
 }
