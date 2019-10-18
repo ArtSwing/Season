@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- CEO Board 게시글 List -->
+<select id="contentList" parameterType="map" resultType="AdminBoardVO">
+	select * from ceoboard where (cboard_con like CONCAT('%',#{param2},'%') or cboard_title like CONCAT('%',#{param2},'%')) order by cboard_id desc limit #{param1},10;
+</select>
+<!-- CEO Board 작성 게시글 등록 -->
+<insert id="CEOWriteReg" parameterType="AdminBoardVO" useGeneratedKeys="true" keyProperty="cboard_id">
+	insert into ceoboard (cboard_title, cboard_con, writer_cid) values (#{cboard_title}, #{cboard_con}, #{writer_cid}) 
+</insert>
