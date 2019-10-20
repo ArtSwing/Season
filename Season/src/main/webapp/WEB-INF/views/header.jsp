@@ -35,7 +35,7 @@
 				<li><a href="#"><strong>메뉴관리</strong></a></li>
 				<li><a href="#"><strong>재고관리</strong></a></li>
 				<li><a href="#"><strong>발주관리</strong></a></li>
-				<li><a href="#"><strong>요청사항</strong></a></li>
+				<li><a href="sug"><strong>건의사항</strong></a></li>
 				<li><a href="#"><strong>매출관리</strong></a></li>
 			</ul>
 		</div>
