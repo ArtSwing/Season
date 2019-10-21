@@ -1,0 +1,45 @@
+body {
+	background-image: url('/resources/images/mainback.jpg');
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+	background-size: 2240px 5000px;
+}
+#header_head {
+	width: 100%;
+	height: 130px;
+	text-align: center;
+	margin-top: 40px;
+}
+
+#header_main {
+	clear:both;
+	margin-top: 100px;
+}
+
+ul {
+	list-style: none;
+	text-align: center;
+}
+
+ul li {
+	display: inline;
+	text-transform: uppercase;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-right: 11px;
+	letter-spacing: 1px;
+	background-color: rgba(80, 90, 30, 0.5);
+	position: relative;
+}
+
+ul li a {
+	text-decoration: none;
+	color: white;
+	font-size: 17px;
+}
+
+ul.menu_hover li:hover {
+	background-color: rgba(80, 90, 30, 0.8);
+}

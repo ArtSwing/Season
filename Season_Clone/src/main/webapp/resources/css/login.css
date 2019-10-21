@@ -1,0 +1,72 @@
+body {
+	background-image: url('/resources/images/mainback.jpg');
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+	background-size: 2240px 5000px;
+}
+
+#div_main {
+	margin-top: 200px;
+	width: 1000px;
+	height: 700px;
+	text-align: center;
+	margin-left: 230px;
+}
+
+#main {
+	background-color: rgba(80, 90, 30, 0.8);
+	width: 100%;
+	height: 400px;
+	text-align: center;
+}
+
+#foot {
+	width: 100%;
+	height: 200px;
+	background-color: rgba(0, 0, 0, 0.8);
+	clear: both;
+	text-align: center;
+	color: #C3C3C3;
+	margin-top: 100px;
+}
+
+div #main:hover {
+	height: 700px;
+	transition: height 1s;
+}
+
+div #main:hover p.mouse_over {
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+div #main:hover div.login {
+	opacity: 1;
+	transition: opacity 2s;
+}
+
+div.login {
+	text-align: center;
+	opacity: 0;
+}
+
+.mouse_over {
+	opacity: 1;
+	width: 1000px;
+}
+
+#btnLogin {
+	width: 245px;
+	height: 50px;
+	background-color: rgba(80, 90, 30, 0.1);
+	border: 1px solid #000000;
+}
+
+#btnLogin:hover {
+	background-color: rgba(80, 90, 30, 0.8);
+}
+
+#load_css {
+	opacity: 0;
+	transition: opacity 2s;
+}
