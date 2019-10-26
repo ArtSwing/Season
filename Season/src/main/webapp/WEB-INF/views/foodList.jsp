@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div id="main_contents">
-		 <p class="menu_title">&nbsp;&nbsp;메뉴관리</p>
+		<p class="menu_title">&nbsp;&nbsp;메뉴관리</p>
 		<table>
 			<tr>
 				<th>번호</th>

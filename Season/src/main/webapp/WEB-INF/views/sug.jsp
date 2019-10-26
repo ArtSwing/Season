@@ -4,10 +4,6 @@
 <html>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-<!-- autocomplete from jQuery Ui -->
-    <script src='{% static "js/jquery-1.11.3.min.js" %}'></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <title>건의사항 게시판</title>
 <%@ include file="header.jsp" %>
 <script>
@@ -35,7 +31,7 @@
 		<td>${row.spot}</td>
 		<td>
 			<!-- 원하는 날짜형식으로 출력 위해 fmt태그 사용 -->
-			<fmt:formatDate value="${row.board_date}" pattern="yyyy-mm-dd HH:mm:ss"></fmt:formatDate>
+			${row.board_date}
 		</td>
 		</tr>
 	</c:forEach>

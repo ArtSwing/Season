@@ -6,16 +6,16 @@
 
 <!-- 게시글 목록 조회 -->
 <select id="listAll" resultType="com.ht.season.board.BoardDTO">
-	SELECT bno,title,content,board_date,(select spot from member,board where board.mid = member.mid) spot from board order by bno desc
+	SELECT bno,title,content,board_date,spot from board order by bno desc
 </select>
 <!-- 게시글 작성 -->
 <insert id="insert"> <!-- NVL = 그값이 null이면 들어가는 Default 값 -->
-	insert into board (bno,title,content,board_date,mid) values(select NVL(MAX(bno)+1,1)from board),
-	#{title},#{content},sysdate,#{spot} )
+	insert into board (bno,title,content,board_date,spot) values((select NVL(MAX(bno)+1,1)from board),
+	#{title},#{content},sysdate,#{spot})
 </insert>
 <!--  게시글 상세보기 -->
 <select id="view" resultType="com.ht.season.board.BoardDTO">
-	select bno,title,content,board_date,(select spot from member,board where board.mid = member.mid) from board
+	select bno,title,content,board_date,spot from board
 	where bno = #{bno}
 </select>
 <!--  게시글 수정 처리 -->

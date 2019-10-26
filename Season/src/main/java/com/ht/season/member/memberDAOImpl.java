@@ -23,6 +23,7 @@ public class memberDAOImpl implements memberDAO {
 		return sqlSession.selectOne("member.viewMember", vo);
 	}
 	
+	@Override
 	public void logout(HttpSession session) {
 		
 	}

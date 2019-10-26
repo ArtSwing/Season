@@ -1,7 +1,5 @@
 package com.ht.season.member;
 
-import java.util.List;
-
 import javax.servlet.http.HttpSession;
 
 import com.ht.season.member.memberDTO;

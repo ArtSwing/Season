@@ -12,7 +12,6 @@
 	
 			var title = $("#title").val(); // 변수 타이틀은 아이디 타이틀의 값
 			var content = $("#content").val();
-			var spot =  '<%=(String)session.getAttribute("spot")%>';
 			if(title == "") {
 				alert("제목을 입력하세요.");
 				document.form1.title.focus();
@@ -25,12 +24,14 @@
 			}
 		document.form1.submit();
 		});
+		
 	});
 </script>
 </head>
 <body>
-	<form name="form1" method="post" action="${path}/insert">
-		<div style="float: right">이름 : ${dto.spot}</div>
+	<form name="form1" method="post" action="${path}/suginsert">
+		<div style="float: right">작성자 : <%=(String)session.getAttribute("spot")%></div>
+		<input type="hidden" id="spot" name="spot" value=<%=(String)session.getAttribute("spot")%>>
 		<div>
 			제목 <input name="title" id="title" size="80" placeholder="제목을 입력해주세요.">
 		</div>

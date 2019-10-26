@@ -40,8 +40,7 @@
 	<form name="form1" method="post">
 		<div>
 			작성일자 :
-			<fmt:formatDate value="${dto.board_date}"
-				pattern="yyyy-MM-dd a HH:mm:ss" />
+			${dto.board_date}
 		</div>
 		<div style="float: right">이름 : ${dto.spot}</div>
 		<div>

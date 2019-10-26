@@ -1,5 +1,6 @@
 package com.ht.season.board;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class BoardDTO {
@@ -28,8 +29,10 @@ public class BoardDTO {
 	public void setSpot(String spot) {
 		this.spot = spot;
 	}
-	public Date getBoard_date() {
-		return board_date;
+	SimpleDateFormat date = new SimpleDateFormat("yyyy년 MM월 dd일");
+	public String getBoard_date() {
+		String dates = date.format(board_date);
+		return dates;
 	}
 	public void setBoard_date(Date board_date) {
 		this.board_date = board_date;

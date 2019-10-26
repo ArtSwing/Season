@@ -2,8 +2,6 @@ package com.ht.season.board;
 
 import java.util.List;
 
-import javax.servlet.http.HttpSession;
-
 public interface BoardDAO {
 	// 게시글작성
 	public void create(BoardDTO dto) throws Exception;

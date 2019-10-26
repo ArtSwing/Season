@@ -4,6 +4,9 @@
 
 <html>
 <head>
+<script src='{% static "js/jquery-1.11.3.min.js" %}'></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <link href="<c:url value="/resources/css/header.css" />"
 	rel="stylesheet">
 <script type="text/javascript">
@@ -32,7 +35,7 @@
 
 		<div id="header_main">
 			<ul class="menu_hover">
-				<li><a href="#"><strong>메뉴관리</strong></a></li>
+				<li><a href="food"><strong>메뉴관리</strong></a></li>
 				<li><a href="#"><strong>재고관리</strong></a></li>
 				<li><a href="#"><strong>발주관리</strong></a></li>
 				<li><a href="sug"><strong>건의사항</strong></a></li>
