@@ -9,7 +9,6 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <link href="<c:url value="/resources/css/header.css" />"
 	rel="stylesheet">
-<link href="<c:url value="/resources/css/main.css"/>" rel="stylesheet">
 <script type="text/javascript">
 	function load() {
 

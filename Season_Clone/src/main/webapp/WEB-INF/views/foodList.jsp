@@ -7,10 +7,8 @@
 <%@ include file="header.jsp"%>
 </head>
 <body>
-	<div id="main_contents"
-		style="whith: 100%; background-color: rgba(255, 255, 255, 0.6); border: 1px solid #235100; margin: 70px 300px 70px 315px; padding: 30px 30px 30px 20px;">
-		<p class="menu_title"
-			style="font-weight: bold; color: #234200; font-size: 20px;">&nbsp;&nbsp;메뉴관리</p>
+	<div id="main_contents">
+		<p class="menu_title">&nbsp;&nbsp;메뉴관리</p>
 		<table>
 			<tr>
 				<th>번호</th>
