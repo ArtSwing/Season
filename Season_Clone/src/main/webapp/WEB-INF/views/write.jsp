@@ -30,7 +30,7 @@
 </head>
 <body>
 	<form name="form1" method="post" action="${path}/suginsert">
-		<div style="float: right">이름 : <%=(String)session.getAttribute("spot")%></div>
+		<div style="float: right">작성자 : <%=(String)session.getAttribute("spot")%></div>
 		<input type="hidden" id="spot" name="spot" value=<%=(String)session.getAttribute("spot")%>>
 		<div>
 			제목 <input name="title" id="title" size="80" placeholder="제목을 입력해주세요.">
