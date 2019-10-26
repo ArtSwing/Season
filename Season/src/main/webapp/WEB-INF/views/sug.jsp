@@ -16,8 +16,9 @@
 </script>
 </head>
 <body>
-<button type="button" id="btnWrite">글쓰기</button>
-<table border="1" width="600px">
+
+<div id="sugContain">
+<table id="sug">
 	<tr>
 		<th>번호</th>
 		<th>제목</th>
@@ -35,10 +36,9 @@
 		</td>
 		</tr>
 	</c:forEach>
-
-
-
 </table>
+</div>
+<button type="button" id="btnWrite">글쓰기</button>
 
 </body>
 <%@ include file="footer.jsp" %>

@@ -3,13 +3,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-<link href="<c:url value="/resources/css/main.css"/>" rel="stylesheet">
 <%@ include file="header.jsp"%>
 </head>
 <body>
 	<div id="main_contents">
 		<p class="menu_title">&nbsp;&nbsp;메뉴관리</p>
-		<table>
+		<table id="basic">
 			<tr>
 				<th>번호</th>
 				<th>재료명</th>

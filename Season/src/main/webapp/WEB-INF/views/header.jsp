@@ -7,6 +7,7 @@
 <script src='{% static "js/jquery-1.11.3.min.js" %}'></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link href="<c:url value="/resources/css/main.css"/>" rel="stylesheet">
 <link href="<c:url value="/resources/css/header.css" />"
 	rel="stylesheet">
 <script type="text/javascript">
