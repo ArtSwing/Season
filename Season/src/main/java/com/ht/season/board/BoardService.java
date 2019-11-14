@@ -14,7 +14,9 @@ public interface BoardService {
 	// 게시글 삭제
 	public void delete(int bno) throws Exception;
 	// 게시글 전체 목록
-	public List<BoardDTO> listAll() throws Exception;
+	public List<BoardDTO> listAll(Search search) throws Exception;
 	// 게시글 admincheck
 	public boolean adminCheck(HttpSession session);
+	
+	public int listCnt(Search search) throws Exception;
 }

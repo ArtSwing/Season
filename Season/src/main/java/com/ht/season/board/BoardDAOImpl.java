@@ -3,6 +3,7 @@ package com.ht.season.board;
 import java.util.List;
 
 import javax.inject.Inject;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
@@ -35,8 +36,13 @@ public class BoardDAOImpl implements BoardDAO {
 	}
 	//게시글 전체 목록
 	@Override
-	public List<BoardDTO> listAll() throws Exception {
-		return sqlsession.selectList("board.listAll");
+	public List<BoardDTO> listAll(Search search) throws Exception {
+		return sqlsession.selectList("board.listAll", search);
+	}
+	
+	@Override
+	public int listCnt(Search search) throws Exception{
+		return sqlsession.selectOne("board.listCnt", search);
 	}
 
 }

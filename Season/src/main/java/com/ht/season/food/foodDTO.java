@@ -1,25 +1,11 @@
 package com.ht.season.food;
 
-import java.sql.Date;
-
 public class foodDTO {
-	private String fid;
-	private String img;
-	private String name;
-	private Date life;
-	private String country;
-	private String price;
 	public String getFid() {
 		return fid;
 	}
 	public void setFid(String fid) {
 		this.fid = fid;
-	}
-	public String getImg() {
-		return img;
-	}
-	public void setImg(String img) {
-		this.img = img;
 	}
 	public String getName() {
 		return name;
@@ -27,10 +13,10 @@ public class foodDTO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Date getLife() {
+	public String getLife() {
 		return life;
 	}
-	public void setLife(Date life) {
+	public void setLife(String life) {
 		this.life = life;
 	}
 	public String getCountry() {
@@ -45,7 +31,11 @@ public class foodDTO {
 	public void setPrice(String price) {
 		this.price = price;
 	}
-	
+	private String fid;
+	private String name;
+	private String life;
+	private String country;
+	private String price;
 	
 	
 

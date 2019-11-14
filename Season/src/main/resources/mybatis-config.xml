@@ -9,9 +9,8 @@
 		<property name="mPassword" value="password" />
 		<property name="mSpot" value="spot" />
 	</properties>
-	
 	<typeAliases>
         <package name="com.ht.season.member.memberDTO" />
+        <package name="com.ht.season.board.BoardDTO" />
     </typeAliases>
-
 </configuration>

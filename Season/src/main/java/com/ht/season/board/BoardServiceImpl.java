@@ -58,8 +58,8 @@ public class BoardServiceImpl implements BoardService {
 	}
 	// 게시글 목록
 	@Override
-	public List<BoardDTO> listAll() throws Exception {
-		return boardDao.listAll();
+	public List<BoardDTO> listAll(Search search) throws Exception {
+		return boardDao.listAll(search);
 	}
 
 	@Override
@@ -69,6 +69,11 @@ public class BoardServiceImpl implements BoardService {
 			return true;
 		}
 		return false;
+	}
+	
+	@Override
+	public int listCnt(Search search) throws Exception{
+		return boardDao.listCnt(search);
 	}
 
 }

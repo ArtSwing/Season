@@ -21,12 +21,4 @@ public class mainController {
 	public String login() {
 		return "main";
 	}
-	@RequestMapping("/food")
-	public ModelAndView food(@ModelAttribute foodDTO vo) {
-		List<foodDTO> vo2 = fd.viewFood(vo);		
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("foodList");
-		mav.addObject("list",vo2);
-		return mav;
-	}
 }

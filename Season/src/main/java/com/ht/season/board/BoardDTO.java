@@ -29,18 +29,13 @@ public class BoardDTO {
 	public void setSpot(String spot) {
 		this.spot = spot;
 	}
-	SimpleDateFormat date = new SimpleDateFormat("yyyy년 MM월 dd일");
+	SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
 	public String getBoard_date() {
 		String dates = date.format(board_date);
 		return dates;
 	}
 	public void setBoard_date(Date board_date) {
 		this.board_date = board_date;
-	}
-	@Override
-	public String toString() {
-		return "BoardDTO [bno=" + bno + ", title=" + title + ", content=" + content + ", spot=" + spot + ", board_date="
-				+ board_date + "]";
 	}
 	private int bno;
 	private String title;

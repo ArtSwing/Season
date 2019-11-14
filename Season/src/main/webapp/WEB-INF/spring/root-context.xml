@@ -17,7 +17,7 @@
 		id="dataSource">
 		<property value="oracle.jdbc.driver.OracleDriver"
 			name="driverClassName" />
-		<property value="jdbc:oracle:thin:@localhost:1521:XE"
+		<property value="jdbc:oracle:thin:@112.154.14.90:1521:XE"
 			name="url" />
 		<property value="season" name="username" />
 		<property value="season" name="password" />

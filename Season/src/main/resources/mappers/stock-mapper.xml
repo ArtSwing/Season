@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="stock">
+	<select id="viewStock" resultType="com.ht.season.stock.stockDTO">
+		select a.*, b.name, c.spot from stock a, food b, member c where c.spot =
+		'${spot}' and a.fid = b.fid and a.mid = c.mid order by c.spot, a.sid
+	</select>
+
+	<select id="viewStockAll" resultType="com.ht.season.stock.stockDTO">
+		select a.*, b.name, c.spot from stock a, food b, member c where a.fid = b.fid and a.mid = c.mid order by a.sid, c.spot 
+	</select>
+</mapper>

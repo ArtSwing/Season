@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src='{% static "js/jquery-1.11.3.min.js" %}'></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -22,7 +23,7 @@
 	<div id="load_css">
 
 		<div id="header_head">
-			<img src="/resources/images/logo.png" style="height: 100%"> <br>
+			<a href="returnHome"><img src="/resources/images/logo.png" style="height: 100%"></a> <br>
 			<br>
 			<hr>
 		</div>
@@ -37,10 +38,10 @@
 		<div id="header_main">
 			<ul class="menu_hover">
 				<li><a href="food"><strong>메뉴관리</strong></a></li>
-				<li><a href="#"><strong>재고관리</strong></a></li>
+				<li><a href="stock"><strong>재고관리</strong></a></li>
 				<li><a href="#"><strong>발주관리</strong></a></li>
 				<li><a href="sug"><strong>건의사항</strong></a></li>
-				<li><a href="#"><strong>매출관리</strong></a></li>
+				<li><a href="chart"><strong>매출관리</strong></a></li>
 			</ul>
 		</div>
 	</div>

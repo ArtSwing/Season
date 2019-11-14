@@ -6,4 +6,13 @@
 	<select id="viewFood" resultType="com.ht.season.food.foodDTO">
 		Select * from food order by fid
 	</select>
+	
+	<insert id="insert"> <!-- NVL = 그값이 null이면 들어가는 Default 값 -->
+		insert into food (fid,name,life,country,price) values((select
+		NVL(MAX(fid)+1,1)from food),#{name},#{life},#{country},#{price})
+	</insert>
+	<insert id="insertStock"> <!-- NVL = 그값이 null이면 들어가는 Default 값 -->
+		insert into food (fid,name,life,country,price) values((select
+		NVL(MAX(fid)+1,1)from food),#{name},#{life},#{country},#{price})
+	</insert>
 </mapper>
